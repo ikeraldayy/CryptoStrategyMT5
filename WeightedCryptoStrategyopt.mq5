@@ -1,13 +1,12 @@
-/**** BEGIN CODE ****/
 datetime lastCalcTime = 0;
 
-// 1) Factor weights. We want -1.5 ... +1.5
-input double InpW_Momentum = 1.0;  // w_mom default
-input double InpW_Volatility = 1.0; // w_vol default
-input double InpW_MACD = 1.0;      // w_macd default
-input double InpW_Donchian = 1.0;  // w_donch default
+// 1) Factor weights
+input double InpW_Momentum = 1.0; 
+input double InpW_Volatility = 1.0;
+input double InpW_MACD = 1.0;      
+input double InpW_Donchian = 1.0; 
 
-// 2) Stop-loss percent for both longs & shorts, default 0.07, but we can optimize >0.05
+// 2) Stop-loss percent for both longs & shorts, default 0.05, but we can optimize >0.05
 input double InpStopLossPct = 0.05; 
 
 // List of coin symbols
@@ -652,4 +651,3 @@ double AdjustToVolumeStep(string symbol, double volume)
    if(adjusted<minLot) adjusted= 0.0; 
    return adjusted;
 }
-/**** END CODE ****/
