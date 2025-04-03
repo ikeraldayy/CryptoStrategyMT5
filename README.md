@@ -1,0 +1,1 @@
+# CryptoStrategyMT5
